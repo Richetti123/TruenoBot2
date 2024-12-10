@@ -12,7 +12,7 @@ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗
 console.log(e)
 }}
 handler.command = ['bard', 'gemini', 'bot']
-handler.help = ['bard', 'gemini' 'bot']
+handler.help = ['bard', 'gemini']
 handler.tags = ['herramientas']
 
 handler.premium = false
