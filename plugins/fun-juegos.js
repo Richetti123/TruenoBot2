@@ -18,6 +18,15 @@ let h = ps.getRandom()
 let i = ps.getRandom()
 let j = ps.getRandom() 
 
+if (command == 'donarsala') {
+let top = `*EL DONADOR DE SALA SERÁ ${user(f)}📣*
+*EN CASO DE TERCERA SALA DONARÁ ${user(g)}📣*`
+m.reply(top, null, { mentions: conn.parseMention(top) })}
+
+if (command == '3ganadores') {
+let top = `*🎉🎊EL GANADOR DEL SORTEO DE HOY HA SIDO ${user(f)}🎉🎊*\n*🎉🎊¡¡¡¡FELICIDADES!!!!🎊🎉*\n\n*EN CASO DE NO PRESENTARSE EL SEGUNDO GANADOR ES ${user(h)}*\n*Y EN CASO NINGUNO HAYA RECLAMADO SU PREMIO EL TERCER GANADOR ES ${user(g)}*`
+m.reply(top, null, { mentions: conn.parseMention(top) })}
+
 if (command == 'amistad' || command == 'amigorandom') {   
 m.reply(`*🔰 Vamos a hacer algunas amistades 🔰*\n\n*Oye ${toM(a)} hablale al privado a ${toM(b)} para que jueguen y se haga una amistad 🙆*\n\n*Las mejores amistades empiezan con un juego 😉*`, null, {
 mentions: [a, b]})}
@@ -455,8 +464,8 @@ mentionedJid: conn.parseMention(top),
 isForwarded: true,
 forwardingScore: 1, 
 forwardedNewsletterMessageInfo: {
-newsletterJid: '120363160031023229@newsletter',
-newsletterName: 'INFINITY-WA 💫',
+newsletterJid: '120363258427334062@newsletter',
+newsletterName: 'NOTICIAS MICHIBOT Y DERIVADOS😼🤖',
 serverMessageId: -1
 }}})
 } */
@@ -486,7 +495,7 @@ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗
 console.log(e)}}
 handler.help = ['love', 'gay2', 'lesbiana', 'pajero', 'pajera', 'puto', 'puta', 'manco', 'manca', 'rata', 'prostituta', 'prostituto'].map(v => v + ' @tag | nombre')
 handler.tags = ['calculator']
-handler.command = /^love|gay2|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto|amigorandom|amistad|regalar|dar|enviar|meter|chupar|metersela|retar|formarpareja|formarparejas|gay|personalidad|pregunta|preguntas|apakah|ship|shippear|topgays|topputos|toplindos|toplind@s|topput@s|toppajer@s|toppajeros|topshipost|topshiposters|toppanafresco|topgrasa|toppanafrescos|toplagrasa|topintegrante|topintegrantes|topotakus|topfamosos|topfamos@s|topsostero|topparejas|top5parejas|Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame|ruletas|ruleta|suerte/i
+handler.command = /^love|gay2|donarsala|3ganadores|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto|amigorandom|amistad|regalar|dar|enviar|meter|chupar|metersela|retar|formarpareja|formarparejas|gay|personalidad|pregunta|preguntas|apakah|ship|shippear|topgays|topputos|toplindos|toplind@s|topput@s|toppajer@s|toppajeros|topshipost|topshiposters|toppanafresco|topgrasa|toppanafrescos|toplagrasa|topintegrante|topintegrantes|topotakus|topfamosos|topfamos@s|topsostero|topparejas|top5parejas|Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame|ruletas|ruleta|suerte/i
 handler.exp = 100
 handler.group = true
 export default handler
