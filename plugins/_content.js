@@ -8,15 +8,15 @@ let handler = m => m
 handler.before = async function (m, { conn, isAdmin, isBotAdmin, isOwner, isROwner } ) {
 global.key = ''
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? this.user.jid : m.sender
-let pp = await this.profilePictureUrl(who, 'image').catch(_ => "https://qu.ax/boNQF.jpg")
+let pp = await this.profilePictureUrl(who, 'image').catch(_ => "https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png")
 
 global.canales = [canal1, canal2, canal3, canal4].getRandom()
 global.welgata = [tk, ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig, fb, tk, ths, asistencia].getRandom()
 global.redesMenu = [canal1, canal2, canal3, canal4, soporteGB, grupo1, grupo2, grupo3, grupo4, grupo5, grupo6, md, ig, paypal, yt, asistencia, fb, tk].getRandom()
 global.accountsgb = [canal1, canal2, canal3, canal4, tk, ig, yt, paypal, fb, ths, md, asistencia].getRandom()
 
-global.canalIdGB = ["120363160031023229@newsletter", "120363169294281316@newsletter", "120363203805910750@newsletter", "120363302472386010@newsletter"]
-global.canalNombreGB = ["INFINITY-WA 💫", "GB - UPDATE 🐈", "Tips sobre GataBot 🤩", "NEW PROJECT: YartexBot-MD ✨"]
+global.canalIdGB = ["120363258427334062@newsletter"]
+global.canalNombreGB = ["NOTICIAS MICHIBOT Y DERIVADOS😼🤖"]
 global.channelRD = await getRandomChannel()
 
 // Imágenes 
@@ -34,33 +34,33 @@ global.imagen11 = fs.readFileSync("./media/menus/img10.jpg")
 global.imagen12 = fs.readFileSync("./media/menus/img11.jpg")
 global.imagen13 = fs.readFileSync("./media/menus/img12.jpg")
 
-global.img = 'https://qu.ax/vZii.jpg'
-global.img2 = 'https://qu.ax/hjcB.jpg'
+global.img = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img2 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
 
-global.img3 = 'https://qu.ax/zELg.jpg' //prem
-global.img4 = 'https://qu.ax/YueS.jpg' //prem
+global.img3 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png' //prem
+global.img4 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png' //prem
 
-global.img5 = 'https://qu.ax/xLcn.jpg'
-global.img6 = 'https://qu.ax/EGOe.jpg'
-global.img7 = 'https://qu.ax/wly.jpg'
-global.img8 = 'https://qu.ax/TPVV.jpg'
-global.img9 = 'https://qu.ax/qKlN.jpg'
+global.img5 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img6 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img7 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img8 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img9 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
 
-global.img10 = 'https://qu.ax/SYFo.jpg'
-global.img11 = 'https://qu.ax/efhn.jpg'
-global.img12 = 'https://qu.ax/Vmpl.jpg'
-global.img13 = 'https://qu.ax/ElSy.jpg'
-global.img14 = 'https://qu.ax/Tgbe.jpg'
-global.img15 = 'https://qu.ax/Puwj.jpg' 
+global.img10 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img11 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img12 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img13 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img14 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img15 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
 
-global.img16 = 'https://qu.ax/ovkN.jpg' //+18
+global.img16 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png' //+18
 
-global.img17 = 'https://qu.ax/HJdr.jpg'
-global.img18 = 'https://qu.ax/HCt.jpg'
+global.img17 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img18 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
 
-global.logogit = 'https://qu.ax/RzKF.jpg'
+global.logogit = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
 
-global.gataVidMenu = ['https://qu.ax/AAvg.mp4', 'https://qu.ax/SeFS.mp4', 'https://qu.ax/NqZN.mp4'].getRandom()
+global.gataVidMenu = ['https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'].getRandom()
 global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18].getRandom()
 global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13].getRandom()
 
@@ -80,7 +80,7 @@ let ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.
 let fgif = {key: {participant : '0@s.whatsapp.net'}, message: {"videoMessage": { "title": wm, "h": `Hmm`, 'seconds': '999999999', 'gifPlayback': 'true', 'caption': bottime, 'jpegThumbnail': fs.readFileSync('./media/menus/Menu3.jpg')}}}
                              
 let enlace = { contextInfo: { externalAdReply: {title: wm + ' 🐈', body: 'support group' , sourceUrl: redesMenu, thumbnail: await(await fetch(gataMenu)).buffer() }}}
-let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ', thumbnailUrl: gataMenu, sourceUrl: accountsgb }}}
+let enlace2 = { contextInfo: { externalAdReply: { showAdAttribution: true, mediaUrl: yt, mediaType: 'VIDEO', description: '', title: wm, body: wm, thumbnailUrl: gataMenu, sourceUrl: accountsgb }}}
 let dos = [enlace, enlace2]  
 
 global.wait = "⌛ *`Cargando...`*\n*✪✦✦⊹⊹⊹⊹⊹⊹⊹⊹✪* `20%`"
