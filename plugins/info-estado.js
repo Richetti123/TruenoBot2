@@ -14,27 +14,27 @@ if (process.send) { process.send('uptime')
 _muptime = await new Promise(resolve => { process.once('message', resolve) 
 setTimeout(resolve, 1000) }) * 1000}
 let uptime = clockString(_uptime)
-let estado = `╭━━━━[ *𝙀𝙎𝙏𝘼𝘿𝙊 | 𝙎𝙏𝘼𝙏𝙐𝙎* ]━━━━━⬣
-┃💗 *¡Hola | Hi!* ${name}
+let estado = `╭━━━━[ *𝙀𝙎𝙏𝘼𝘿𝙊* ]━━━━━⬣
+┃💗 *¡Hola!* ${name}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 ┃𓃠 *Versión de ${gt}*
 ┃➥ ${vs}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✿ 𝗖𝗥𝗘𝗔𝗗𝗢𝗥𝗔 | 𝗖𝗥𝗘𝗔𝗧𝗢𝗥
-┃ღ 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨
+┃✿ CREADORES
+┃ღ Richetti y GeriPium
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃✿ 𝗖𝗢𝗡𝗧𝗔𝗖𝗧𝗢 | 𝗖𝗢𝗡𝗧𝗔𝗖𝗧
+┃✿ CONTACTO
 ┃➥ *${ig}*
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ღ ${global.opts['self'] ? '𝙋𝙍𝙄𝙑𝘼𝘿𝙊 - 𝙋𝙍𝙄𝙑𝘼𝙏𝙀' : '𝙋𝙐𝘽𝙇𝙄𝘾𝙊 - 𝙋𝙐𝘽𝙇𝙄𝘾'}
+┃ღ ${global.opts['self'] ? '𝙋𝙍𝙄𝙑𝘼𝘿𝙊' : '𝙋𝙐𝘽𝙇𝙄𝘾𝙊'}
 ┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-┃ღ *Activo Durante | Active During* 
+┃ღ *Activo Durante* 
 ┃➥ ${uptime}
-┃ღ *Usuario(s) | Users* 
+┃ღ *Usuarios* 
 ┃➥ ${Object.keys(global.db.data.users).length} 
-┃ღ *Chat(s) Prohibido(s) | Forbidden Chats*
+┃ღ *Chat(s) Prohibidos*
 ┃➥ ${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length} 
-┃ღ *Usuario(s) Prohibido(s) | Prohibited Urs*
+┃ღ *Usuario(s) Prohibidos*
 ┃➥ ${Object.entries(global.db.data.users).filter(user => user[1].banned).length} 
 ╰━━━━━━━━━━━━━━━━━━⬣`
 await conn.reply(m.chat, estado, m, fakeChannel)
