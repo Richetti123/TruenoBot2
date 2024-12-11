@@ -515,10 +515,6 @@ ${margen}
 
 ✓ _${usedPrefix}fytendencia | fyranking_
 
-> 🏆 *TOP en GATABOT* 🏆
-
-✓ _${usedPrefix}top | lb | leaderboard_
-
 > 🎭 *FILTROS EN STICKERS* 🎭
 
 ✓ _${usedPrefix}sticker | s *imagen o video*_
