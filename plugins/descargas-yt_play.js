@@ -6,7 +6,7 @@ import axios from 'axios'
 const LimitAud = 725 * 1024 * 1024 //700MB
 const LimitVid = 425 * 1024 * 1024 //425MB
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
-if (!text) return conn.reply(m.chat, `${lenguajeGB['smsAvisoMG']()}${mid.smsMalused4}\n*${usedPrefix + command} Billie Eilish - Bellyache*`, m)
+if (!text) return conn.reply(m.chat, `${lenguajeGB['smsAvisoMG']()}${mid.smsMalused4}\n*${usedPrefix + command} Khé - Rauw Alejandro*`, m)
 const yt_play = await search(args.join(' '))
 const ytplay2 = await yts(text)
 const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
@@ -43,15 +43,7 @@ const res = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenk
 let { result } = await res.json()
 await conn.sendMessage(m.chat, { audio: { url: await result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m })
 } catch (e) {
-try {
-let d2 = await fetch(`https://exonity.tech/api/ytdlp?apikey=adminsepuh&url=${yt_play[0].url}`)
-let dp = await d2.json()
-const audioUrl = dp.result.audio
-await conn.sendMessage(m.chat, { audio: { url: audioUrl }, mimetype: 'audio/mpeg' }, { quoted: m }) 
-} catch (e) { 
-await m.react('❌')
-console.log(e)
-}}}}
+}}}
 
 if (command == 'play2' || command == 'video') {
 try {    
