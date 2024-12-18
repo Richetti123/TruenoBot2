@@ -112,7 +112,7 @@ const downloadUrl = await fetchY2mate(yt_play[0].url);
 await conn.sendMessage(m.chat, { document: { url: downloadUrl }, mimetype: 'audio/mpeg', fileName: `${yt_play[0].title}.mp3` }, { quoted: m });
 } catch (e4) {
 try {
-const res = await fetch(`https://www.vanitas-api.online/download/ytmp3&url=${yt_play[0].url}`)
+const res = await fetch(`https://www.vanitas-api.online/download/ytmp3?url=${yt_play[0].url}`)
 const audioData = await res.json()
 if (audioData.status && audioData.result?.downloadUrl) {
 await conn.sendMessage(m.chat, { document: { url: audioData.result.downloadUrl }, mimetype: 'audio/mpeg', fileName: `${yt_play[0].title}.mp3` }, { quoted: m });
