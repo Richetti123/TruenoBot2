@@ -26,9 +26,11 @@ await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, fkontak, m)
 try {
 let lolhuman = await fetch(`https://www.vanitas-api.online/download/ytmp3&url=${youtubeLink}`);
 let lolh = await lolhuman.json();
+  console.log(lolh);
 let n = lolh?.response?.title || 'error'
 await conn.sendMessage(m.chat, { audio: { url: lolh.response.link }, fileName: `${n}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })  
 } catch(error) {
+  console.error(error);
 try {
 let searchh = await yts(youtubeLink)
 let __res = searchh.all.map(v => v).filter(v => v.type == "video")
