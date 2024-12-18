@@ -24,7 +24,7 @@ throw `${lenguajeGB['smsAvisoMG']()}${mid.smsY2(usedPrefix, command)} ${usedPref
 }}}  
 await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, fkontak, m)
 try {
-let lolhuman = await fetch(`https://www.vanitas-api.online/download/ytmp3?&url=${youtubeLink}`)    
+let lolhuman = await fetch(`https://www.vanitas-api.online/download/ytmp3&url=${youtubeLink}`)    
 let lolh = await lolhuman.json()
 let n = lolh.response.title || 'error'
 await conn.sendMessage(m.chat, { audio: { url: lolh.response.link }, fileName: `${n}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })  
