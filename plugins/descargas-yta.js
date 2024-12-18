@@ -28,7 +28,8 @@ let lolhuman = await fetch(`https://www.vanitas-api.online/download/ytmp3&url=${
 let lolh = await lolhuman.json()
 let n = lolh.response.title || 'error'
 await conn.sendMessage(m.chat, { audio: { url: lolh.response.link }, fileName: `${n}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })  
-} catch {   
+} catch(error) {   
+  console.error(error)
 try {
 let searchh = await yts(youtubeLink)
 let __res = searchh.all.map(v => v).filter(v => v.type == "video")
