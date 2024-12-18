@@ -41,12 +41,12 @@ await conn.sendMessage(m.chat, { video: { url: mediaa.result }, fileName: `error
 } catch (E2) {  
 //console.log('Error 2 ' + E2)   
 try {
-let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${youtubeLink}`)    
+let lolhuman = await fetch(`https://www.vanitas-api.online/download/ytmp4?url=${youtubeLink}`)    
 let lolh = await lolhuman.json()
-let n = lolh.result.title || 'error'
-let n2 = lolh.result.link
-let n3 = lolh.result.size
-let n4 = lolh.result.thumbnail
+let n = lolh.response.title || 'error'
+let n2 = lolh.response.link
+let n3 = lolh.response.size
+let n4 = lolh.response.thumbnail
 await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `╭━❰  ${wm}  ❱━⬣\n┃ 💜 ${mid.smsYT1}\n┃ ${n}\n╰━━━━━❰ *𓃠 ${vs}* ❱━━━━⬣`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch (E3) {
 //console.log('Error 3 ' + E3)   
