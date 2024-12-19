@@ -6,21 +6,19 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 try{
 let contact, number, ofc, nombre, description, correo, lugar, enlace, biog
 let pp = gataImg
-const cat = `MichiBot
-wa.me/56941827124
-wa.me/56928561853
+const cat = `${wm}
+wa.me/527772668134
 
 *---------------------*
 
 *INSTAGRAM*
-*https://www.instagram.com/ceogeripium.dzn*
-*https://www.instagram.com/richetti_123*
+*https://www.instagram.com/ysebastian.g*
 
 *---------------------*
 
 *CANAL WHATSAPP Y GRUPO OFICIAL
-*https://whatsapp.com/channel/0029VaZ90V9EKyZGyqHKt61M*
-*https://chat.whatsapp.com/BEh3wICepoo9DUR3yLZwir*
+*https://whatsapp.com/channel/0029VajCBSxDjiOgNgeVdy0D*
+*https://chat.whatsapp.com/GYVCOqyxXjhLqoeLyXr5xX*
 
 *---------------------*`
 let biografiaBot = await conn.fetchStatus(conn.user.jid.split('@')[0] + '@s.whatsapp.net').catch(_ => 'undefined')
