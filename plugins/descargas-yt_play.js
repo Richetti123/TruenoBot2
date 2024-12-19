@@ -32,18 +32,13 @@ const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
 > _*Descargando... Aguarde un momento por favor*_`.trim()
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
   
-if (command == 'play' || command == 'audio') {
-try {    
-let q = '128kbps'
-const yt = await youtubedl(yt_play[0].url).catch(() => youtubedlv2(yt_play[0].url))
-await conn.sendAudio(m.chat, await yt.audio[q].download(), `${await yt.title}.mp3`, null, m, false, { mimetype: 'audio/mp4' })
-} catch (e) {
+if (command == 'play') {	
 try {
-const res = await fetch(`https://www.vanitas-api.online/download/ytmp3?url=${yt_play[0].url}`)
-let { result } = await res.json()
-await conn.sendMessage(m.chat, { audio: { url: await result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m })
+const dataRE = await fetch(`https://www.vanitas-api.online/download/ytmp3?url=${yt_play[0].url}`);
+const dataRET = await dataRE.json();
+await conn.sendMessage(m.chat, dataRET.response.link, 'default.mp3', null, m, false, { mimetype: 'audio/mpeg' });
 } catch (e) {
-}}}
+}}
 
 if (command == 'play2' || command == 'video') {
 try {    
