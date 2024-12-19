@@ -15,8 +15,8 @@ global.welgata = [tk, ig, yt2, yt2, ig, md, ig, yt, paypal, yt2, yt2, ig, fb, tk
 global.redesMenu = [canal1, canal2, canal3, canal4, soporteGB, grupo1, grupo2, grupo3, grupo4, grupo5, grupo6, md, ig, paypal, yt, asistencia, fb, tk].getRandom()
 global.accountsgb = [canal1, canal2, canal3, canal4, tk, ig, yt, paypal, fb, ths, md, asistencia].getRandom()
 
-global.canalIdGB = ["120363258427334062@newsletter"]
-global.canalNombreGB = ["NOTICIAS MICHIBOT Y DERIVADOS😼🤖"]
+global.canalIdGB = ["120363314640015862@newsletter"]
+global.canalNombreGB = ["VENTA DE BOTS @ysebastian.g"]
 global.channelRD = await getRandomChannel()
 
 // Imágenes 
@@ -34,33 +34,33 @@ global.imagen11 = fs.readFileSync("./media/menus/img10.jpg")
 global.imagen12 = fs.readFileSync("./media/menus/img11.jpg")
 global.imagen13 = fs.readFileSync("./media/menus/img12.jpg")
 
-global.img = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img2 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img2 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
 
-global.img3 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png' //prem
-global.img4 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png' //prem
+global.img3 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg' //prem
+global.img4 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg' //prem
 
-global.img5 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img6 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img7 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img8 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img9 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img5 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img6 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img7 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img8 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img9 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
 
-global.img10 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img11 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img12 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img13 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img14 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img15 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img10 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img11 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img12 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img13 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img14 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img15 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
 
-global.img16 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png' //+18
+global.img16 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg' //+18
 
-global.img17 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
-global.img18 = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.img17 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
+global.img18 = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
 
-global.logogit = 'https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'
+global.logogit = 'https://i.ibb.co/jJTs8wj/Menu2.jpg'
 
-global.gataVidMenu = ['https://i.ibb.co/1T3JkM0/170-sin-t-tulo-20241111002758.png'].getRandom()
+global.gataVidMenu = ['https://i.ibb.co/jJTs8wj/Menu2.jpg'].getRandom()
 global.gataMenu = [img, img2, img6, img7, img8, img9, img13, img14, img15, img17, img18].getRandom()
 global.gataImg = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8, imagen9, imagen10, imagen11, imagen12, imagen13].getRandom()
 
