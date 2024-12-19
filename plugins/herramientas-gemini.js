@@ -1,6 +1,6 @@
 import fetch from 'node-fetch'
 var handler = async (m, { text,  usedPrefix, command }) => {
-if (!text) throw `*Hola soy michibot puedes hablar conmigo y preguntarme cualquier cosa*\n\nRecuerda siempre usar el .bot\nEjemplo: .bot Como estas`
+if (!text) throw `*Hola soy ${wm} puedes hablar conmigo y preguntarme cualquier cosa*\n\nRecuerda siempre usar el .bot\nEjemplo: .bot Como estas`
 try {
 conn.sendPresenceUpdate('composing', m.chat);
 var apii = await fetch(`https://apis-starlights-team.koyeb.app/starlight/gemini?text=${text}`)
