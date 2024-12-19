@@ -30,13 +30,13 @@ const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
 ⌘━━─≪ ${gt} ≫─━━⌘
 
 > _*Descargando... Aguarde un momento por favor*_`.trim()
-await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
+await conn.sendMessage(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
   
 if (command == 'play' || command == 'audio') {
 try {    
-let q = '128kbps'
+let q = '256kbps'
 const yt = await youtubedl(yt_play[0].url).catch(() => youtubedlv2(yt_play[0].url))
-await conn.sendFile(m.chat, await yt.audio[q].download(), `${await yt.title}.mp3`, null, m, false, { mimetype: 'audio/mp4' })
+await conn.sendMessage(m.chat, await yt.audio[q].download(), `${await yt.title}.mp3`, null, m, false, { mimetype: 'audio/mp4' })
 } catch (e) {
 try {
 const res = await fetch(`https://www.vanitas-api.online/download/ytmp3?url=${yt_play[0].url}`)
@@ -85,7 +85,7 @@ const texto1 = `*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*
 
 > > _*Descargado su audio en documento. Aguarde un momento, por favor*_`.trim();
 
-await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake);
+await conn.sendMessage(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake);
 try {
 const apiUrl = `https://www.vanitas-api.online/download/ytmp3?url=${encodeURIComponent(yt_play[0].url)}`;
 const apiResponse = await fetch(apiUrl);
@@ -96,7 +96,7 @@ const downloadUrl = delius.data.download.url;
 await conn.sendMessage(m.chat, { document: { url: downloadUrl }, mimetype: 'audio/mpeg', fileName: `${yt_play[0].title}.mp3` }, { quoted: m });
 } catch (e1) {
 try {    
-let q = '128kbps'
+let q = '256kbps'
 const yt = await youtubedl(yt_play[0].url).catch(async _ => await youtubedlv2(yt_play[0].url))
 const dl_url = await yt.audio[q].download()
 const ttl = await yt.title
@@ -156,7 +156,7 @@ const texto1 = `*𓆩 𓃠 𓆪 ✧═══ ${vs} ═══✧ 𓆩 𓃠 𓆪*
 
 > > _*Descargado su video en documento. Aguarde un momento, por favor*_`.trim();
 
-await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake);
+await conn.sendMessage(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake);
 try {
 const apiUrl = `${apis}/download/ytmp4?url=${encodeURIComponent(yt_play[0].url)}`;
 const apiResponse = await fetch(apiUrl);
