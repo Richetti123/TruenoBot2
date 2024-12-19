@@ -7,11 +7,11 @@ const LimitAud = 725 * 1024 * 1024 //700MB
 const LimitVid = 425 * 1024 * 1024 //425MB
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-	let q, v, yt, dl_url, ttl, size, lolhuman, lolh, n, n2, n3, n4, cap, qu, currentQuality   
-	if (!text) throw `${lenguajeGB['smsAvisoMG']()}${mid.smsMalused4}\n*${usedPrefix + command} Khé? - Rauw Alejandro*`
-		try {
-			const yt_play = await search(args.join(" "))
-			let additionalText = ''
+let q, v, yt, dl_url, ttl, size, lolhuman, lolh, n, n2, n3, n4, cap, qu, currentQuality   
+if (!text) throw `${lenguajeGB['smsAvisoMG']()}${mid.smsMalused4}\n*${usedPrefix + command} Khé? - Rauw Alejandro*`
+try {
+const yt_play = await search(args.join(" "))
+let additionalText = ''
 
 const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
 ★ ${mid.smsYT1}
@@ -36,99 +36,45 @@ const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
 > _*Descargando... Aguarde un momento por favor*_`.trim()
 await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
 
-				if (command == 'play') {	
-					try {
-						let v = yt_play[0].url
-						const yt = await ytDownload(v, 'audio');
-						await conn.sendMessage(m.chat, { audio: { url: yt }, mimetype: 'audio/mpeg', contextInfo: {
-							externalAdReply: {
-							title: `Disfrute de su audio con ${wm}`,
-							body: yt_play[0].title,
-							thumbnailUrl: yt_play[0].thumbnail, 
-							mediaType: 1,
-							showAdAttribution: true,
-							renderLargerThumbnail: true
-						}}} , { quoted: m });
-					} catch {
-						try {
-							const dataRE = await fetch(`https://www.vanitas-api.online/download/ytmp3?url=${yt_play[0].url}`);
-							const dataRET = await dataRE.json();
-							await conn.sendMessage(m.chat, { audio: { url: dataRET.response.link }, mimetype: 'audio/mpeg',
-								contextInfo: {
-									externalAdReply: {
-										title: `Disfrute de su audio con ${wm}`,
-										body: "",
-										thumbnailUrl: yt_play[0].thumbnail,
-										mediaType: 1,
-										showAdAttribution: true,
-										renderLargerThumbnail: true
-									}
-								}
-							} , { quoted: m });
-} catch {
+if (command == 'play') {	
 try {
-let humanLol = await fetch(`https://api.lolhuman.xyz/api/ytplay?apikey=${lolkeysapi}&query=${yt_play[0].title}`)
-let humanRET = await humanLol.json()
-await conn.sendMessage(m.chat, { audio: { url: humanRET.result.audio.link }, mimetype: 'audio/mpeg', contextInfo: {
+let v = yt_play[0].url
+const yt = await ytDownload(v, 'audio');
+await conn.sendMessage(m.chat, { audio: { url: yt }, mimetype: 'audio/mpeg', contextInfo: {
 externalAdReply: {
-title: yt_play[0].title,
-body: "",
-thumbnailUrl: md, 
-mediaType: 1,
-showAdAttribution: true,
-renderLargerThumbnail: true
-}}} , { quoted: m })       
-} catch {     
-try {
-let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkeysapi}&url=${yt_play[0].url}`)    
-let lolh = await lolhuman.json()
-let n = lolh.result.title || 'error'
-await conn.sendMessage(m.chat, { audio: { url: lolh.result.link}, mimetype: 'audio/mpeg', contextInfo: {
-externalAdReply: {
-title: n,
-body: "",
+title: `Disfrute de su audio con ${wm}`,
+body: yt_play[0].title,
 thumbnailUrl: yt_play[0].thumbnail, 
 mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: true
-}}} , { quoted: m })   
-} catch {   
+}}} , { quoted: m });
+} catch {
 try {
-let searchh = await yts(yt_play[0].url)
-let __res = searchh.all.map(v => v).filter(v => v.type == "video")
-let infoo = await ytdl.getInfo('https://youtu.be/' + __res[0].videoId)
-let ress = await ytdl.chooseFormat(infoo.formats, { filter: 'audioonly' })
-await conn.sendMessage(m.chat, { audio: { url: ress.url }, mimetype: 'audio/mpeg', contextInfo: {
+const dataRE = await fetch(`https://www.vanitas-api.online/download/ytmp3?url=${yt_play[0].url}`);
+const dataRET = await dataRE.json();
+await conn.sendMessage(m.chat, { audio: { url: dataRET.response.link }, mimetype: 'audio/mpeg',
+contextInfo: {
 externalAdReply: {
-title: __res[0].title,
-body: "",
-thumbnailUrl: yt_play[0].thumbnail, 
+title: `Disfrute de su audio con ${wm}`,
+body: yt_play[0].title,
+thumbnailUrl: yt_play[0].thumbnail,
 mediaType: 1,
 showAdAttribution: true,
 renderLargerThumbnail: true
-}}} , { quoted: m })   
-//conn.sendMessage(m.chat, { audio: { url: ress.url }, fileName: __res[0].title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })  
+}}} , { quoted: m });
 } catch {
-}}}}}
+}}
 }  
-		if (command == 'play2') {
-			try {
-				let v = yt_play[0].url
-				const dataRE = await fetch(`https://www.vanitas-api.online/download/ytmp4?url=${v}`);
-				const dataRET = await dataRE.json();
-				console.log(dataRET)
-				await conn.sendMessage(m.chat, { video: { url: dataRET.response.link }, fileName: `error.mp4`, caption: `╭━❰  ${wm}  ❱━⬣\n┃ 💜 ${mid.smsYT1}\n┃ ${yt_play[0].title}\n╰━━━━━❰ *𓃠 ${vs}* ❱━━━━⬣` }, { quoted: m })
-			} catch {
-				try {
-					let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${yt_play[0].url}`)    
-let lolh = await lolhuman.json()
-let n = lolh.result.title || 'error'
-let n2 = lolh.result.link
-let n3 = lolh.result.size
-let n4 = lolh.result.thumbnail
-await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `╭━❰  ${wm}  ❱━⬣\n┃ 💜 ${mid.smsYT1}\n┃ ${n}\n╰━━━━━❰ *𓃠 ${vs}* ❱━━━━⬣`, thumbnail: await fetch(n4) }, { quoted: m })
+if (command == 'play2') {
+try {
+let v = yt_play[0].url
+const dataRE = await fetch(`https://www.vanitas-api.online/download/ytmp4?url=${v}`);
+const dataRET = await dataRE.json();
+console.log(dataRET)
+await conn.sendMessage(m.chat, { video: { url: dataRET.response.link }, fileName: `error.mp4`, caption: `╭━❰  ${wm}  ❱━⬣\n┃ 💜 ${mid.smsYT1}\n┃ ${yt_play[0].title}\n╰━━━━━❰ *𓃠 ${vs}* ❱━━━━⬣` }, { quoted: m })
 } catch {
-}} 
+} 
 }} catch {
 handler.limit = 0
 }}
