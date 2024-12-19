@@ -6,7 +6,7 @@ let pp = ['https://tinyurl.com/294oahv9']
 let who
 if (m.isGroup) who = m.mentionedJid[0]
 else who = m.chat
-if (!who) throw `😸 *Etiqueta al usuario que quieres saludar.* 👋\nEjemplo:\n.saludar @${m.sender.split`@`[0]}`, false, {mentions: [m.sender]};
+if (!who) throw(`😸 *Etiqueta al usuario que quieres saludar.* 👋\nEjemplo:\n.saludar @${m.sender.split`@`[0]}`, false, {mentions: [m.sender]});
 let name2 = conn.getName(who)
 let name = conn.getName(m.sender)
 
@@ -14,5 +14,5 @@ await conn.sendMessage(m.chat, { video: { url: pp.getRandom() }, gifPlayback: tr
 }
 handler.help = ['saludar <@user>']
 handler.tags = ['fun']
-handler.command = ['saludar', 'hola']
+handler.command = ['saludar']
 export default handler
