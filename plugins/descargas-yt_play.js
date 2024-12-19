@@ -42,9 +42,9 @@ await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, 
 						const yt = await ytDownload(v, 'audio');
 						await conn.sendMessage(m.chat, { audio: { url: yt }, mimetype: 'audio/mpeg', contextInfo: {
 							externalAdReply: {
-							title: yt_play[0].title,
-							body: "",
-							thumbnailUrl: md, 
+							title: `Disfrute de su audio con ${wm}`,
+							body: yt_play[0].title,
+							thumbnailUrl: yt_play[0].thumbnail, 
 							mediaType: 1,
 							showAdAttribution: true,
 							renderLargerThumbnail: true
@@ -56,9 +56,9 @@ await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, 
 							await conn.sendMessage(m.chat, { audio: { url: dataRET.response.link }, mimetype: 'audio/mpeg',
 								contextInfo: {
 									externalAdReply: {
-										title: yt_play[0].title,
+										title: `Disfrute de su audio con ${wm}`,
 										body: "",
-										thumbnailUrl: md,
+										thumbnailUrl: yt_play[0].thumbnail,
 										mediaType: 1,
 										showAdAttribution: true,
 										renderLargerThumbnail: true
