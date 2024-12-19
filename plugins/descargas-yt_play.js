@@ -3,6 +3,7 @@ import fetch from 'node-fetch'
 import yts from 'yt-search'
 import ytdl from 'ytdl-core'
 import axios from 'axios'
+import { ytDownload } from '../lib/y2mate.js'
 const LimitAud = 725 * 1024 * 1024 //700MB
 const LimitVid = 425 * 1024 * 1024 //425MB
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
@@ -30,11 +31,11 @@ const texto1 = `⌘━─━─≪ *YOUTUBE* ≫─━─━⌘
 ⌘━━─≪ ${gt} ≫─━━⌘
 
 > _*Descargando... Aguarde un momento por favor*_`.trim()
-await conn.sendMessage(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
+await conn.sendFile(m.chat, yt_play[0].thumbnail, 'error.jpg', texto1, m, null, fake)
   
 if (command == 'play' || command == 'audio') {
 try {    
-let q = '256kbps'
+let q = '128kbps'
 const yt = await youtubedl(yt_play[0].url).catch(() => youtubedlv2(yt_play[0].url))
 await conn.sendMessage(m.chat, await yt.audio[q].download(), `${await yt.title}.mp3`, null, m, false, { mimetype: 'audio/mp4' })
 } catch (e) {
@@ -96,7 +97,7 @@ const downloadUrl = delius.data.download.url;
 await conn.sendMessage(m.chat, { document: { url: downloadUrl }, mimetype: 'audio/mpeg', fileName: `${yt_play[0].title}.mp3` }, { quoted: m });
 } catch (e1) {
 try {    
-let q = '256kbps'
+let q = '128kbps'
 const yt = await youtubedl(yt_play[0].url).catch(async _ => await youtubedlv2(yt_play[0].url))
 const dl_url = await yt.audio[q].download()
 const ttl = await yt.title
